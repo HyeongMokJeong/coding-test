@@ -1,15 +1,22 @@
-num = int(input())
-num_list=[]
-new_num = num
-value = 0
-while(new_num!=0):
-    num_list.append(new_num % 10)
-    new_num = new_num // 10
+n = 3
 
-if num_list.count(0)==0 or sum(num_list)%3 !=0:
-    print(-1)
-else:
-    num_list.sort(reverse=True)
-    for idx,i in enumerate(num_list):
-        value = value + (i*(10**(len(num_list)-idx-1)))
-    print(int(value))
+target = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+result = [[0] * n for _ in range(n)]
+
+def run():
+    n = 3
+    for i in range(n):
+        for j in range(n):
+            result[i][j] = target[n - j - 1][i] # 핵심 i,j = n - j - 1, i
+run()
+for i in result:
+    print(i)
+
+target2 = ['1', '234', '56789']
+result2 = ['' for _ in range(n)]
+
+for idx, i in enumerate(target2):
+    for idy, j in enumerate(i):
+        t = n - 1 - idx + ((idy + 1) // 2) # 핵심 i =  n - 1 - idx + ((idy + 1) // 2)
+        result2[t] = j + result2[t]
+print(result2)
