@@ -9,7 +9,7 @@ for i in range(len(ary)):
     if ary[i] == "(":
         stack.append(ary[i])
         temp *= 2
-
+ 
     elif ary[i] == "[":
         stack.append(ary[i])
         temp *= 3
