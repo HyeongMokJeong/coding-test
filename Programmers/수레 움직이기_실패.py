@@ -28,7 +28,7 @@ def solution(maze):
                 for nbx, nby in [(bx + 1, by), (bx - 1, by), (bx, by + 1), (bx, by - 1)]:
                     if 0 <= nbx < y and 0 <= nby < x and not visited_b[nbx][nby] and (nrx != nbx and nry != nby) and (red_c != (nbx, nby) and blue_c != (nrx, nry)):
                         visited_b[nbx][nby] = 1
-                        dfs((nrx, nry), (nbx, nby), count + 1)
+                        dfs((nrx, nry), (nbx, nby), count + 1) 
                 visited_r[nrx][nry] = 0
     dfs(red_s, blue_s, 0)
     return 0 if answer == float('inf') else answer
