@@ -1,18 +1,15 @@
 def solution(answers):
     answer = []
-    ct= [0, 0, 0]
-    as1 = [1, 2, 3, 4, 5]
-    as2 = [2, 1, 2, 3, 2, 4, 2, 5]
-    as3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
-    
-    for i in answers:
-        if answer[i] == as1[i % (len(as1)-1)]: 
-            ct[0] += 1
-        if answer[i] == as2[i % (len(as2)-1)]: 
-            ct[1] += 1
-        if answer[i] == as3[i % (len(as3)-1)]: 
-            ct[2] += 1
-    
-    answer.append(ct.index(max(ct)) + 1)
+    c = [0, 0, 0 ,0]
+    p1 = [1, 2, 3, 4, 5]
+    p2 = [2, 1, 2, 3, 2, 4, 2, 5]
+    p3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+
+    for i in range(len(answers)):
+        if answers[i] == p1[i % len(p1)]: c[1] += 1
+        if answers[i] == p2[i % len(p2)]: c[2] += 1
+        if answers[i] == p3[i % len(p3)]: c[3] += 1
+    m = max(c)
+    for i in range(1, len(c)):
+        if c[i] == m: answer.append(i)
     return answer
-print(solution([1,3,2,4,2]))
