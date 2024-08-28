@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Solution {
     public int[] solution(int e, int[] starts) {
         // 약수의 개수가 가장 큰 숫자들 중 가장 작은 숫자
@@ -19,9 +21,6 @@ class Solution {
                 dp[i] = dp[i + 1];
             }
         }
-        int[] answer = new int[starts.length];
-        for (int i = 0; i < starts.length; i++) answer[i] = dp2[starts[i]];
-    
-        return answer;
+        return Arrays.stream(starts).map(i -> dp2[i]).toArray();
     }
 }
