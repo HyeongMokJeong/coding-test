@@ -1,6 +1,4 @@
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
 
 class Solution {
     public int solution(int[][] data, int col, int row_begin, int row_end) {
