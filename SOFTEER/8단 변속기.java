@@ -3,7 +3,7 @@ package SOFTEER;
 import java.io.*;
 import java.util.*;
 
-class 나무섭지 {
+class 팔단변속기 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
