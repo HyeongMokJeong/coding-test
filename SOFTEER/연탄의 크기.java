@@ -1,7 +1,6 @@
 package SOFTEER;
 
 import java.io.*;
-import java.util.*;
 
 class 연탄의크기 {
     public static void main(String[] args) throws IOException {

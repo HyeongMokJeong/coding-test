@@ -1,7 +1,6 @@
 package SOFTEER;
 
 import java.io.*;
-import java.util.*;
 
 class 지도자동구축 {
     public static void main(String[] args) throws IOException {
