@@ -33,7 +33,6 @@ class 전광판 {
     StringBuilder sb = new StringBuilder();
     for (String name : nameList) {
         sb.append("Room ").append(name).append(":").append("\n");
-        boolean isStart = true;
         int start = 0, end = 0;
         
         boolean[] time = timeMap.get(name);
