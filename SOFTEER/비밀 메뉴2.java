@@ -3,7 +3,7 @@ package SOFTEER;
 import java.io.*;
 import java.util.*;
 
-class Pipelined {
+class 비밀메뉴2 {
     private static int[] a, b;
     private static int[][] dp;
     public static void main(String[] args) throws IOException {
