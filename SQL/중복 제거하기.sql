@@ -1,0 +1,8 @@
+select
+    FP.PRODUCT_ID,
+    FP.PRODUCT_NAME,
+    FP.PRICE * SUM(FO.AMOUNT) as TOTAL_SALES
+from FOOD_PRODUCT FP join FOOD_ORDER FO on FP.PRODUCT_ID = FO.PRODUCT_ID
+where date_format(FO.PRODUCE_DATE, '%Y-%m') = '2022-05'
+group by FP.PRODUCT_ID
+order by TOTAL_SALES desc, FP.PRODUCT_ID;
