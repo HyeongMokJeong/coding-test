@@ -38,6 +38,9 @@ class Solution {
                 }
             }
         }
+        Set<> s = new HashSet<>();
+        Map<String, String> m = new HashMap<>();
+        m.con
 
         for (int w : weight) {
             if (w <= K) answer += 1;
